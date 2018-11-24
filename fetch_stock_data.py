@@ -14,6 +14,6 @@ def download_csv(symbols, start_date=None, end_date=None, path='data'):
 
 if __name__ == "__main__":
 	# Testing purpose
-	symbols = ['AAPL', 'GOOG', 'FB', 'AMZN']
-
+	#symbols = ['AAPL', 'GOOG', 'FB', 'AMZN']
+	symbols = ['SPY']
 	download_csv(symbols)
