@@ -1,6 +1,13 @@
 import pandas as pd
 import util
 
+# Momentum
+def momentum(df, n):
+	momentum = df.copy()
+	momentum = momentum / momentum.shift(n) - 1
+	momentum.ix[0:n] = 0
+	return momentum
+
 # Simple Moving Average
 def SMA(df, n):
 	SMA = df.rolling(n).mean()
